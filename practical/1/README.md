@@ -44,4 +44,4 @@
 <h5>Government Polytechnic, Pune</h5>
 <h6>Government Polytechnic, Pune</h6>
 ```
-[live-demo](https://yp-gpp/CM2104/practical/1/p1-b.html)
+[live-demo](https://yp-gpp.github.io/CM2104/practical/1/p1-b.html)
