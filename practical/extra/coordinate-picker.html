@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Image Coordinate Picker</title>
+        <style>
+            body {
+                background: linen;
+            }
+            span {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="image-file">Choose a picture:</label>
+
+        <input type="file"
+        id="image-file" name="image-file"
+        accept="image/png, image/jpeg">
+        
+        <br>
+        <div>
+            <label for="height">Height: </label>
+            <input type="number" id="height" name="height"> 
+            
+            <label for="width">Width: </label>
+            <input type="number" id="width" name="width">
+            
+            <input type="submit" value="apply" id="change-dim">
+        </div>
+
+        <div>
+            The coordinates of click are<br>
+            x: <span id="x-corr"></span>; y: <span id="y-corr"></span>
+        </div>
+
+        <br><br>
+        <div style="border: 3px solid black; min-height: 50px;">
+            <img src="" alt="input image" id="inp-image">
+        </div>
+
+        <script>
+            const fileInput = document.getElementById("image-file");
+            const inpImage = document.getElementById("inp-image")
+            const dim = document.getElementById("change-dim")
+            const width = document.getElementById("width")
+            const height = document.getElementById("height")
+            const xCorr = document.getElementById("x-corr")
+            const yCorr = document.getElementById("y-corr")
+
+            fileInput.addEventListener("change", (event) => {
+                let selectefFile = fileInput.files[0];
+                inpImage.src = URL.createObjectURL(selectefFile)
+                setTimeout(() => {
+                    width.value = inpImage.width
+                    height.value = inpImage.height
+                }, 500);
+            })
+
+            dim.addEventListener('click', (event) => {
+                inpImage.width = width.value
+                inpImage.height = height.value
+            })
+
+            inpImage.addEventListener('click', (e) => {
+                // e = Mouse click event.
+                var rect = e.target.getBoundingClientRect();
+                xCorr.innerHTML = e.clientX - rect.left; //x position within the element.
+                yCorr.innerHTML = e.clientY - rect.top;  //y position within the element.
+            })
+        </script>
+    </body>
+</html>
+
