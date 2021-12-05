@@ -65,8 +65,8 @@
             inpImage.addEventListener('click', (e) => {
                 // e = Mouse click event.
                 var rect = e.target.getBoundingClientRect();
-                xCorr.innerHTML = e.clientX - rect.left; //x position within the element.
-                yCorr.innerHTML = e.clientY - rect.top;  //y position within the element.
+                xCorr.innerHTML = Math.round(e.clientX - rect.left); //x position within the element.
+                yCorr.innerHTML = Math.round(e.clientY - rect.top);  //y position within the element.
             })
         </script>
     </body>
