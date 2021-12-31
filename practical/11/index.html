@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Practical 11</title>
+  </head>
+  <body>
+    <h1>Sign UP</h1>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" maxlength="50" id="name" placeholder="John Doe">
+      <br>
+
+      <label for="mail">Email:</label>
+      <input type="email" name="mail" id="mail">
+      <br>
+
+      <label for="uname">Username:</label>
+      <input type="text" name="uname" id="uname" maxlength="20" placeholder="jdoe42" required>
+      <br>
+
+      <label for="pass">Password:</label>
+      <input type="password" name="pass" id="pass" required>
+      <br>
+
+      <label for="type">What interests you more?</label><br>
+      <input type="radio" name="type" id="fr" value="Frontend">
+      <label for="fr">Frontend</label><br>
+      <input type="radio" name="type" id="ba" value="Backend">
+      <label for="ba">Backend</label><br>
+      <input type="radio" name="type" id="fs" value="Full-Stack">
+      <label for="fs">Full-Stack</label><br>
+
+      <label for="remarks">Remarks:</label><br>
+      <textarea id="remarks" name="remarks" rows="3" cols="25" style="resize: none;"></textarea>
+      
+      <br>
+      <input type="checkbox" name="tc" id="tc">
+      <label for="tc">I Agree all Terms and Conditions</lable>
+
+      <br>
+      <input type="submit" value="Sign UP!">
+      <input type="reset" value="Clear">
+    </form>
+  </body>
+</html>
+

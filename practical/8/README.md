@@ -1,4 +1,4 @@
-# Practical 02
+# Practical 08
 
 Q. Create a webpage that displays the first-year timetable Make effective use of rowspan and colspan attributes. Make use of &lt;th&gt; tag too.
 
