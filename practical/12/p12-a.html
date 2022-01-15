@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 12 - a</title>
+
+        <style>
+            h1, body, p {
+                padding: 16px;
+                color: white;
+            }
+            
+            body {
+                min-height: 95vh;
+                background: black url("demo.jpg") no-repeat center;
+                background-size: cover;
+            }
+            
+            p {
+                border: 1px solid lightblue;
+            }
+
+            h1 {
+                border: 2px solid lightgreen;
+                color: #222;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="background: skyblue;">CSS Background</h1>
+        <p>The background property in CSS allows you to control the background of any element (what paints underneath the content in that element). It is a shorthand property, which means that it allows you to write what would be multiple CSS properties in one. </p>
+        <p>
+        background is made up of eight other properties:
+        </p>
+        <ul>
+            <li>background-image</li>
+            <li>background-position</li>
+            <li>background-size</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-origin</li>
+            <li>background-clip</li>
+            <li>background-color</li>
+        </ul>
+        <p>
+        You can use any combination of these properties that you like, in almost any order. There is a gotcha though: anything you don’t specify in the background property is automatically set to its default. The background will be transparent, instead of red. The fix is easy though: just define background-color after background, or just use the shorthand (e.g. background: url(...) red;)
+        </p>
+    </body>
+</html>
